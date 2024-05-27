@@ -1,9 +1,10 @@
 "use client";
+import { Phone } from "lucide-react";
+import React, { useState } from "react";
+
 import { LinkButton } from "@/components/Buttons";
 import { CustomSelect } from "@/components/CustomSelect";
-import { bannerData, dashboardData, dashboardFilterOptions } from "@/lib/utils";
-import React, { useState } from "react";
-import { FiPhone } from "react-icons/fi";
+import { bannerData, dashboardData, dashboardFilterOptions } from "@/lib/helper";
 
 const Dashboard = () => {
   const [filter, setFilter] = useState(1);
@@ -16,12 +17,12 @@ const Dashboard = () => {
   );
 
   return (
-    <section className="flex flex-col w-full items-center">
-      <div className="flex flex-col w-full max-w-screen-xl md:pt-24 pt-20 md:p-8 p-4 gap-y-6">
+    <section style={{ width: innerWidth > 1024 ? "calc(100% - 88px)" : "100%" }} className="flex flex-col items-center lg:translate-x-[88px]">
+      <div className="flex flex-col max-w-screen-xl md:pt-24 pt-20 md:p-8 p-4 gap-y-6 w-full box-border">
         <div className="flex md:flex-row flex-col w-full md:justify-between justify-start md:items-center items-start align-baseline my-4 gap-3">
           <h1 className="lg:text-[32px] md:text-[28px] text-[24px] font-bold">Hi {dashboardData.name} 👋</h1>
           <div className="flex flex-row justify-start items-center gap-2">
-            <FiPhone color="#85898C" size={24} />
+            <Phone color="#85898C" size={24} />
             <p className=" text-[#3d3e40] text-left text-[17px]">{dashboardData.phoneCount.toLocaleString()}</p>
             <LinkButton>Manage</LinkButton>
           </div>
