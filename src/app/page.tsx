@@ -4,10 +4,11 @@ import React, { useState } from "react";
 
 import { LinkButton } from "@/components/Buttons";
 import { CustomSelect } from "@/components/CustomSelect";
-import { bannerData, dashboardData, dashboardFilterOptions } from "@/lib/helper";
+import { bannerData, dashboardData, dashboardFilterOptions, useWindowDimensions } from "@/lib/helper";
 
 const Dashboard = () => {
   const [filter, setFilter] = useState(1);
+  const { innerWidth } = useWindowDimensions();
 
   const renderCard = ({ title, value }: { title: string; value: number }) => (
     <div className="flex flex-col w-full bg-[#00000026] hover:bg-[#017dbc1a] lg:py-[40px] py-[24px] px-[24px] text-white">
