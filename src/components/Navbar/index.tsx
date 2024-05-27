@@ -19,7 +19,7 @@ const Navbar = () => {
       >
         <div className="flex flex-col w-full p-4">
           {sidebarItems.map((item) => (
-            <div className="flex flex-row w-full justify-start items-center gap-x-3 pl-4 text-xs text-[#aaa] hover:text-white h-[48px] cursor-pointer">
+            <div key={item.id} className="flex flex-row w-full justify-start items-center gap-x-3 pl-4 text-xs text-[#aaa] hover:text-white h-[48px] cursor-pointer">
               {item.icon}
               {item.title}
             </div>
