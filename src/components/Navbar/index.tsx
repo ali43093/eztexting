@@ -7,7 +7,7 @@ import { sidebarItems } from "@/lib/helper";
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 w-full h-[64px] px-6 flex items-center gap-x-4 border-b border-solid border-[#e6e6e6]">
+    <nav className="fixed top-0 left-0 w-full h-[64px] px-6 flex items-center gap-x-4 border-b border-solid border-[#e6e6e6] z-10 bg-white">
       <div className="lg:hidden flex cursor-pointer">
         {openDrawer ? <X onClick={() => setOpenDrawer(!openDrawer)} color="#000" /> : <Menu onClick={() => setOpenDrawer(!openDrawer)} color="#000" />}
       </div>

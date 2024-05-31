@@ -78,3 +78,7 @@
 .cardGradient {
   background-image: linear-gradient(140deg, #8220c7, #017dbc);
 }
+
+.primaryButtonBG {
+  background-image: linear-gradient(140deg, rgb(31, 80, 203), rgb(1, 125, 188));
+}
